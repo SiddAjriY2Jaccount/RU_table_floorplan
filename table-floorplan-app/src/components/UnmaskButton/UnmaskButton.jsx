@@ -1,16 +1,16 @@
 import React from 'react';
 import './UnmaskButton.css';
 
-const UnmaskButton = ({ rowIndex }) => {
-  const handleUnmaskClick = () => {
-    // Placeholder for unmask button's onClick event handler logic
-    console.log(`Unmask row ${rowIndex}`);
-  };
-
-  return (
+const UnmaskButton = ({ rowIndex, onClick, isHighlighted }) => {
+    const buttonStyle = {
+        backgroundColor: isHighlighted ? 'yellow' : '',
+        };
+    
+    return (
     <button
-      onClick={handleUnmaskClick}
-      className="UnmaskButton"
+    onClick={onClick}
+    style={buttonStyle}
+    className="UnmaskButton"
     >
       Unmask
     </button>

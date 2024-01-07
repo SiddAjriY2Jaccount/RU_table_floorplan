@@ -1,6 +1,6 @@
 .GridWrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-template-columns: fit-content(50%) fit-content(50%); /* Two columns of equal width */
     grid-gap: 10px; /* Space between the grids */
     /* padding: 20px; */
   }

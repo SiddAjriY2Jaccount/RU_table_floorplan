@@ -116,7 +116,6 @@ function populateFloorplan(floorplan, nodeList, maxHeap) {
   return floorplan;
 }
 
-// Driver code
 export function generateCompletedFloorplan(jsonData) {
     let floorplan = generateEmptyFloorplan(NUM_GRIDS, RU_PER_GRID);
     // let [nodeList, coreI4, coreI5] = convertJsonToNodeList(extractJsonData(PATH));
@@ -125,9 +124,46 @@ export function generateCompletedFloorplan(jsonData) {
     let maxHeap = createInitialMaxHeapFromNodeList(nodeList);
     let finalFloorplan = populateFloorplan(floorplan, nodeList, maxHeap);
 
-    for (const grid of finalFloorplan) {
-        console.log(grid.join(' '));
-    }
+    // for (const grid of finalFloorplan) {
+    //     console.log(grid.join(' '));
+    // }
 
+    console.log(finalFloorplan);
     return finalFloorplan;
 }
+
+function rand(min, max) {
+  return parseInt(Math.random() * (max-min+1), 10) + min;
+}
+
+function generateRandomColor() {
+  var h = rand(1, 360);  // hue between 1-360
+  var s = rand(30, 100); // saturation between 30-100%
+  var l = rand(30, 70);  // lightness between 30-70%
+  return 'hsl(' + h + ',' + s + '%,' + l + '%)';
+}
+
+let generateUniqueSetOfColors = (n) => {
+  const setOfColors = new Set();
+  while (setOfColors.size < n) {
+    setOfColors.add(generateRandomColor());
+  }
+  return Array.from(setOfColors);
+}
+
+export function generateColorMap(jsonData) {
+    // Compute number of distinct and unique product names
+    const distinctProducts = new Set(jsonData.map(ele => ele.product));
+    const distinctProductsArray = [...distinctProducts];
+    const numOfDistinctProducts = distinctProducts.size;
+
+    let colors = generateUniqueSetOfColors(numOfDistinctProducts);
+
+    const productNameToColorMap = new Map();
+    
+    for (let i = 0; i < colors.length; i++) {
+      productNameToColorMap.set(distinctProductsArray[i], colors[i]); 
+    }
+
+    return productNameToColorMap;
+  }
