@@ -1,0 +1,10 @@
+.DiodeButton {
+    /* padding: 5px 10px; */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .DiodeButton.active {
+    background-color: blue;
+    color: white;
+  }

@@ -1,0 +1,11 @@
+.GridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-gap: 10px; /* Space between the grids */
+    /* padding: 20px; */
+  }
+  
+  .GridContainer {
+    border: 1px solid #ddd; /* Optional border for each GridTable container */
+    /* padding: 10px; */
+  }
