@@ -89,7 +89,7 @@ const TapeinDbView = () => {
         {/* -- MISC BLOCK -- */}
         <tr>
           <td></td>
-          <td colspan="8" border="5px">
+          <td colspan="9" border="5px">
             <b>MISC BLOCK</b>
           </td>
         </tr>
