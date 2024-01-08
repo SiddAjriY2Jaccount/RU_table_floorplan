@@ -139,7 +139,7 @@ function rand(min, max) {
 function generateRandomColor() {
   var h = rand(1, 360);  // hue between 1-360
   var s = rand(30, 100); // saturation between 30-100%
-  var l = rand(30, 70);  // lightness between 30-70%
+  var l = rand(50, 80);  // lightness between 50-80%
   return 'hsl(' + h + ',' + s + '%,' + l + '%)';
 }
 

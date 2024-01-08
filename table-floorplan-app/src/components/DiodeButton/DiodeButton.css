@@ -1,6 +1,6 @@
 .DiodeButton {
-    /* padding: 5px 10px; */
-    border: none;
+    padding: 5px 10px;
+    /* border: none; */
     cursor: pointer;
   }
   
@@ -8,3 +8,4 @@
     background-color: blue;
     color: white;
   }
+

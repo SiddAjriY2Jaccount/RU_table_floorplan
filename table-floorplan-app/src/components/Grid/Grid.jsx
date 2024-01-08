@@ -25,7 +25,10 @@ const Grid = ({ gridNumber, colorMap, highlightedValues, updateHighlightedValue 
   return (
     <table className="Grid">
       <tbody>
-        {grid.map((value, index) => (
+        <tr>
+          <td> 1 </td>
+          <td>
+          {grid.map((value, index) => (
           <tr key={index}>
             {isEven ? <td style={{ backgroundColor: colorMap.get(value) }}>{value}</td> : <td><DiodeButton /></td>}
             {isEven ? <td>{computeGridIndex(index)}</td> : <td><UnmaskButton rowIndex={computeGridIndex(index)} onClick={() => updateHighlightedValue(value)} isHighlighted={highlightedValues.has(value)} /></td>}
@@ -33,6 +36,8 @@ const Grid = ({ gridNumber, colorMap, highlightedValues, updateHighlightedValue 
             {isEven ? <td><DiodeButton /></td> : <td style={{ backgroundColor: colorMap.get(value) }}>{value}</td>}
           </tr>
         ))}
+          </td>
+        </tr>
       </tbody>
     </table>
   );

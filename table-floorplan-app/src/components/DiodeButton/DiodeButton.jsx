@@ -9,12 +9,12 @@ const DiodeButton = () => {
   };
 
   return (
-    <button
+    <div
       onClick={toggleColor}
       className={`DiodeButton ${isActive ? 'active' : ''}`}
     >
         Diode
-    </button>
+    </div>
   );
 };
 

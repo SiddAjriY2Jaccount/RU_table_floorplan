@@ -9,3 +9,7 @@
     border: 1px solid #ddd; /* Optional border for each GridTable container */
     /* padding: 10px; */
   }
+
+.GridWrapperTable {
+  border-collapse: collapse;
+}
