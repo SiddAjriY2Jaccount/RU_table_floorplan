@@ -32,7 +32,7 @@ RU#2 in grid 1)
 - `UnmaskButton` makes use of `useState` hook. When an "Unmask" button is clicked, `setHighlightedValues` is invoked, updating a set of highlighted values with current clicked values. This trigger a re-render of component containing the button and its child components. During the re-render, each unmask button is highlighted in Yellow if the cell's corresponding product name is in the set of highlighted values.
 
 ## How to run?
-- Clone this project: ```git clone https://github.com/SiddAjriY2Jaccount/dungeon```
+- Clone this project: ```git clone https://github.com/SiddAjriY2Jaccount/RU_table_floorplan```
 - From the root directory, navigate into the React app: ```cd table-floorplan-app```
 - Install all dependencies: ```npm install```
 - Now, start the project using the command: ```npm start```
