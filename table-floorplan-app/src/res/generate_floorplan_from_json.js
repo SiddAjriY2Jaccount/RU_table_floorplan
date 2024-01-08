@@ -53,18 +53,22 @@ function convertJsonToNodeList(data) {
 }
 
 function placeI4I5Products(coreI4, coreI5, floorplan) {
-  let rows = NUM_GRIDS;
+  // let rows = NUM_GRIDS;
   let cols = RU_PER_GRID;
   let listCores = [coreI4, coreI5];
-  let toggle = 0;
+
   for (let j = 0; j < cols; j++) {
-    for (let i = 0; i < rows; i++) {
-      if (listCores[toggle].origCount !== 0) {
-        floorplan[i][j] = listCores[toggle].product;
-        listCores[toggle].origCount -= 1;
+    // Since only Grids 1 and 2 can have core i4 and core i5 products, we must limit the row looping to only first 2 rows
+    for (let i = 0; i < 2; i++) {
+      if (listCores[i].origCount !== 0) {
+        floorplan[i][j] = listCores[i].product;
+        listCores[i].origCount -= 1;
       }
     }
-    toggle = toggle === 0 ? 1 : 0;
+    // Swap positions of the 2 cores
+    let temp = listCores[0];
+    listCores[0] = listCores[1];
+    listCores[1] = temp;
   }
   return floorplan;
 }
