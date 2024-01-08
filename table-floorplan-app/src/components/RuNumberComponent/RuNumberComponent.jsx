@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './RuNumberComponent.css';
 
 const RuNumberComponent = ({ gridNumber, index, gridSize }) => {

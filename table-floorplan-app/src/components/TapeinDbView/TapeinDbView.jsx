@@ -92,7 +92,6 @@ const TapeinDbView = () => {
           <td colspan="8" border="5px">
             <b>MISC BLOCK</b>
           </td>
-          <td></td>
         </tr>
 
       </tbody>

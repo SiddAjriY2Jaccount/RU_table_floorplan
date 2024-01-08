@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProductComponent.css';
 
 const ProductComponent = ({ gridNumber, index, floorplan, colorMap }) => {
